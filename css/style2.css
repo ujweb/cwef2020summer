@@ -163,6 +163,9 @@ svg.main__visual--blank {
 .mask__group {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
+  -moz-animation: mask_group 0.5s 4s 1 linear alternate forwards;
+  -webkit-animation: mask_group 0.5s 4s 1 linear alternate forwards;
+  animation: mask_group 0.5s 4s 1 linear alternate forwards;
 }
 .mask__group .mask__action.mask--head-1 {
   left: 0;
@@ -374,4 +377,4 @@ svg.main__visual--blank {
   fill: white;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */

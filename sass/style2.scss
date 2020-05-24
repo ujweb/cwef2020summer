@@ -49,6 +49,7 @@ svg {
 }
 .mask__group {
     @include opacity(0.8);
+    @include animation(mask_group 0.5s 4s 1 linear alternate forwards);
     .mask__action {
         &.mask--head-1 {
             left: 0;

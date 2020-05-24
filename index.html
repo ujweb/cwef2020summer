@@ -13,7 +13,7 @@
         <svg class="main__visual--blank" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 898 364"></svg>
         <div class="main__visual">
-            <div class="mask__group">
+            <div class="">
                 <div class="mask mask__action mask__action--1 mask--head-1">
                     <svg class="main__line main__line--head2" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 898 364">
@@ -260,6 +260,16 @@
             </svg>
         </div>
     </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+            var mainVisualWidth = $('.main__visual--blank').outerWidth();
+            $('.mask__action svg').width(mainVisualWidth);
+            $(window).load(function () {
+                $('.main__visual').children('div').addClass('mask__group');
+            })
+        })
+    </script>
 </body>
 
 </html>
