@@ -26,8 +26,11 @@ svg {
 
 .svg-animation {
     position: relative;
-    width: 60%;
+    width: 90%;
     z-index: 2;
+    @include breakpoint(1024px) {
+        width: 60%;
+    }
     &::before {
         content: '';
         display: block;
