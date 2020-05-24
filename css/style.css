@@ -157,126 +157,132 @@ svg {
   z-index: -1;
 }
 
-.mask {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 0;
+.mask__group {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
-  overflow: hidden;
+  -moz-animation: mask_group 0.5s 4s 1 linear alternate forwards;
+  -webkit-animation: mask_group 0.5s 4s 1 linear alternate forwards;
+  animation: mask_group 0.5s 4s 1 linear alternate forwards;
 }
-.mask svg {
-  position: absolute;
-  height: 100%;
-}
-.mask.mask--head-1 {
+.mask__group .mask__action.mask--head-1 {
   left: 0;
   -moz-animation: width100 1s 1 linear alternate forwards;
   -webkit-animation: width100 1s 1 linear alternate forwards;
   animation: width100 1s 1 linear alternate forwards;
 }
-.mask.mask--head-1 svg {
+.mask__group .mask__action.mask--head-1 svg {
   top: 0;
   bottom: 0;
   left: 0;
 }
-.mask.mask--head-2 {
+.mask__group .mask__action.mask--head-2 {
   right: 0;
   -moz-animation: width100 0.7s 1 linear alternate forwards;
   -webkit-animation: width100 0.7s 1 linear alternate forwards;
   animation: width100 0.7s 1 linear alternate forwards;
 }
-.mask.mask--head-2 svg {
+.mask__group .mask__action.mask--head-2 svg {
   top: 0;
   bottom: 0;
   right: 0;
 }
-.mask.mask--tail {
+.mask__group .mask__action.mask--tail {
   right: 0;
   -moz-animation: width100 0.5s 1 linear alternate forwards;
   -webkit-animation: width100 0.5s 1 linear alternate forwards;
   animation: width100 0.5s 1 linear alternate forwards;
 }
-.mask.mask--tail svg {
+.mask__group .mask__action.mask--tail svg {
   top: 0;
   bottom: 0;
   right: 0;
 }
-.mask.mask__group--1.mask--head-1 {
+.mask__group .mask__action.mask__action--1.mask--head-1 {
   -moz-animation-delay: 500ms;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
-.mask.mask__group--1.mask--head-2 {
+.mask__group .mask__action.mask__action--1.mask--head-2 {
   -moz-animation-delay: 1254ms;
   -webkit-animation-delay: 1254ms;
   animation-delay: 1254ms;
 }
-.mask.mask__group--1.mask--tail {
+.mask__group .mask__action.mask__action--1.mask--tail {
   -moz-animation-delay: 1515ms;
   -webkit-animation-delay: 1515ms;
   animation-delay: 1515ms;
 }
-.mask.mask__group--2.mask--head-1 {
+.mask__group .mask__action.mask__action--2.mask--head-1 {
   -moz-animation-delay: 500ms;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
-.mask.mask__group--2.mask--head-2 {
+.mask__group .mask__action.mask__action--2.mask--head-2 {
   -moz-animation-delay: 1245ms;
   -webkit-animation-delay: 1245ms;
   animation-delay: 1245ms;
 }
-.mask.mask__group--2.mask--tail {
+.mask__group .mask__action.mask__action--2.mask--tail {
   -moz-animation-delay: 1480ms;
   -webkit-animation-delay: 1480ms;
   animation-delay: 1480ms;
 }
-.mask.mask__group--3.mask--head-1 {
+.mask__group .mask__action.mask__action--3.mask--head-1 {
   -moz-animation-delay: 500ms;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
-.mask.mask__group--3.mask--head-2 {
+.mask__group .mask__action.mask__action--3.mask--head-2 {
   -moz-animation-delay: 1286ms;
   -webkit-animation-delay: 1286ms;
   animation-delay: 1286ms;
 }
-.mask.mask__group--3.mask--tail {
+.mask__group .mask__action.mask__action--3.mask--tail {
   -moz-animation-delay: 1472ms;
   -webkit-animation-delay: 1472ms;
   animation-delay: 1472ms;
 }
-.mask.mask__group--4.mask--head-1 {
+.mask__group .mask__action.mask__action--4.mask--head-1 {
   -moz-animation-delay: 500ms;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
-.mask.mask__group--4.mask--head-2 {
+.mask__group .mask__action.mask__action--4.mask--head-2 {
   -moz-animation-delay: 1294ms;
   -webkit-animation-delay: 1294ms;
   animation-delay: 1294ms;
 }
-.mask.mask__group--4.mask--tail {
+.mask__group .mask__action.mask__action--4.mask--tail {
   -moz-animation-delay: 1471ms;
   -webkit-animation-delay: 1471ms;
   animation-delay: 1471ms;
 }
-.mask.mask__group--5.mask--head-1 {
+.mask__group .mask__action.mask__action--5.mask--head-1 {
   -moz-animation-delay: 500ms;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
-.mask.mask__group--5.mask--head-2 {
+.mask__group .mask__action.mask__action--5.mask--head-2 {
   -moz-animation-delay: 1320ms;
   -webkit-animation-delay: 1320ms;
   animation-delay: 1320ms;
 }
-.mask.mask__group--5.mask--tail {
+.mask__group .mask__action.mask__action--5.mask--tail {
   -moz-animation-delay: 1570ms;
   -webkit-animation-delay: 1570ms;
   animation-delay: 1570ms;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  overflow: hidden;
+}
+.mask svg {
+  position: absolute;
+  height: 100%;
 }
 
 .main__text {
@@ -338,6 +344,30 @@ svg {
   }
   100% {
     opacity: 1;
+  }
+}
+@-moz-keyframes mask_group {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes mask_group {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mask_group {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .main__line path {

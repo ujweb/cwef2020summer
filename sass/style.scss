@@ -44,99 +44,103 @@ svg {
         z-index: -1;
     }
 }
-
+.mask__group {
+    @include opacity(0.8);
+    @include animation(mask_group 0.5s 4s 1 linear alternate forwards);
+    .mask__action {
+        &.mask--head-1 {
+            left: 0;
+            @include animation(width100 1s 1 linear alternate forwards);
+            svg {
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        &.mask--head-2 {
+            right: 0;
+            @include animation(width100 0.7s 1 linear alternate forwards);
+            svg {
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &.mask--tail {
+            right: 0;
+            @include animation(width100 0.5s 1 linear alternate forwards);
+            svg {
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &.mask__action--1 {
+            &.mask--head-1 {
+                @include animation-delay(500ms);
+            }
+            &.mask--head-2 {
+                @include animation-delay(1254ms);
+            }
+            &.mask--tail {
+                @include animation-delay(1515ms);
+            }
+        }
+        &.mask__action--2 {
+            &.mask--head-1 {
+                @include animation-delay(500ms);
+            }
+            &.mask--head-2 {
+                @include animation-delay(1245ms);
+            }
+            &.mask--tail {
+                @include animation-delay(1480ms);
+            }
+        }
+        &.mask__action--3 {
+            &.mask--head-1 {
+                @include animation-delay(500ms);
+            }
+            &.mask--head-2 {
+                @include animation-delay(1286ms);
+            }
+            &.mask--tail {
+                @include animation-delay(1472ms);
+            }
+        }
+        &.mask__action--4 {
+            &.mask--head-1 {
+                @include animation-delay(500ms);
+            }
+            &.mask--head-2 {
+                @include animation-delay(1294ms);
+            }
+            &.mask--tail {
+                @include animation-delay(1471ms);
+            }
+        }
+        &.mask__action--5 {
+            &.mask--head-1 {
+                @include animation-delay(500ms);
+            }
+            &.mask--head-2 {
+                @include animation-delay(1320ms);
+            }
+            &.mask--tail {
+                @include animation-delay(1570ms);
+            }
+        }
+    }
+}
 .mask {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 0;
-    @include opacity(0.8);
     overflow: hidden;
     svg {
         position: absolute;
         height: 100%;
-    }
-    &.mask--head-1 {
-        left: 0;
-        @include animation(width100 1s 1 linear alternate forwards);
-        svg {
-            top: 0;
-            bottom: 0;
-            left: 0;
-        }
-    }
-    &.mask--head-2 {
-        right: 0;
-        @include animation(width100 0.7s 1 linear alternate forwards);
-        svg {
-            top: 0;
-            bottom: 0;
-            right: 0;
-        }
-    }
-    &.mask--tail {
-        right: 0;
-        @include animation(width100 0.5s 1 linear alternate forwards);
-        svg {
-            top: 0;
-            bottom: 0;
-            right: 0;
-        }
-    }
-    &.mask__group--1 {
-        &.mask--head-1 {
-            @include animation-delay(500ms);
-        }
-        &.mask--head-2 {
-            @include animation-delay(1254ms);
-        }
-        &.mask--tail {
-            @include animation-delay(1515ms);
-        }
-    }
-    &.mask__group--2 {
-        &.mask--head-1 {
-            @include animation-delay(500ms);
-        }
-        &.mask--head-2 {
-            @include animation-delay(1245ms);
-        }
-        &.mask--tail {
-            @include animation-delay(1480ms);
-        }
-    }
-    &.mask__group--3 {
-        &.mask--head-1 {
-            @include animation-delay(500ms);
-        }
-        &.mask--head-2 {
-            @include animation-delay(1286ms);
-        }
-        &.mask--tail {
-            @include animation-delay(1472ms);
-        }
-    }
-    &.mask__group--4 {
-        &.mask--head-1 {
-            @include animation-delay(500ms);
-        }
-        &.mask--head-2 {
-            @include animation-delay(1294ms);
-        }
-        &.mask--tail {
-            @include animation-delay(1471ms);
-        }
-    }
-    &.mask__group--5 {
-        &.mask--head-1 {
-            @include animation-delay(500ms);
-        }
-        &.mask--head-2 {
-            @include animation-delay(1320ms);
-        }
-        &.mask--tail {
-            @include animation-delay(1570ms);
-        }
     }
 }
 
@@ -165,6 +169,14 @@ svg {
     }
     100% {
         @include opacity(1);
+    }
+}
+@include keyframes(mask_group) {
+    0% {
+        @include opacity(0.8);
+    }
+    100% {
+        @include opacity(0);
     }
 }
 
