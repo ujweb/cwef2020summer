@@ -1,0 +1,96 @@
+%before-after {
+	content: '';
+	display: block;
+}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?4ka9et');
+	src: url('../fonts/icomoon.eot?4ka9et#iefix') format('embedded-opentype'),
+		 url('../fonts/icomoon.ttf?4ka9et') format('truetype'),
+		 url('../fonts/icomoon.woff?4ka9et') format('woff'),
+		 url('../fonts/icomoon.svg?4ka9et#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+.icon {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	&:before {
+		display: block;
+	}
+}
+.icon-dollar:before {
+	content: "\e900";
+}
+.icon-heart:before {
+	content: "\e901";
+}
+.icon-man:before {
+	content: "\e902";
+}
+html {
+	min-height: 100%;
+	height: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+}
+.sr-only {
+	position: absolute !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+*,
+*::before,
+*::after {
+	@include box-sizing(border-box);
+}
+body {
+	min-height: 100%;
+	height: 100%;
+	font-family: Roboto, 'Noto Sans TC', sans-serif;
+}
+.serif {
+	font-family: 'Noto Serif TC', serif;
+}
+a {
+	text-decoration: none;
+	@include breakpoint(1024px) {
+		transition: all .2s;
+	}
+}
+img {
+	display: block;
+}
+.clearfix,
+.clearfix::before,
+.clearfix::after {
+	display: table;
+	clear: both;
+}
