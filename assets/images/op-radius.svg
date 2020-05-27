@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 843" style="enable-background:new 0 0 1920 843;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Rectangle_1_);}
+</style>
+<g id="Page-1">
+	<g id="bg">
+		
+			<linearGradient id="Rectangle_1_" gradientUnits="userSpaceOnUse" x1="502.3584" y1="805.9293" x2="502.3592" y2="805.1639" gradientTransform="matrix(957 0 0 -843 -479797.3438 679496)">
+			<stop  offset="0" style="stop-color:#FFEB00"/>
+			<stop  offset="0.5" style="stop-color:#FDD23E"/>
+			<stop  offset="1" style="stop-color:#FDE0A5"/>
+		</linearGradient>
+		<path id="Rectangle" class="st0" d="M0,0h1920c0,256.9-20.7,443.6-62,560s-103.3,210.7-186,283H0V0z"/>
+	</g>
+</g>
+</svg>

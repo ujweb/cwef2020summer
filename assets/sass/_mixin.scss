@@ -1,0 +1,28 @@
+@mixin list-reset($margin, $padding, $style) {
+    margin: $margin;
+    padding: $padding;
+    list-style: $style;
+}
+@mixin beforeafter($content, $display) {
+    content: $content;
+    display: $display;
+}
+@mixin clear() {
+    @include beforeafter('', table);
+    clear: both;
+}
+@mixin btn-outlined($padding, $color, $background, $opacity) {
+    display: inline-block;
+    padding: $padding;
+    color: $color;
+    line-height: 1;
+    background-color: rgba($background, $opacity);
+    border: 1px solid $color;
+}
+@mixin btn-contained($padding, $color, $background, $opacity) {
+    display: inline-block;
+    padding: $padding;
+    color: $color;
+    line-height: 1;
+    background-color: rgba($background, $opacity);
+}
