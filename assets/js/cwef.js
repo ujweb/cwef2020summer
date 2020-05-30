@@ -30,7 +30,8 @@ $(function() {
             breakpoint: 1199,
             settings: {
                 dots: true,
-                arrows: false
+                prevArrow: '<div class="slider__navi slider__navi--prev"><i class="icon icon-arrow-left"></i></div>',
+                nextArrow: '<div class="slider__navi slider__navi--next"><i class="icon icon-arrow-right"></i></div>'
             }
         }]
     });
