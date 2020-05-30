@@ -91,4 +91,31 @@
   display: none;
 }
 
+.slick-dots {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  text-align: center;
+}
+.slick-dots li {
+  display: inline-block;
+}
+.slick-dots li + li {
+  margin-left: 10px;
+}
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  background-color: #d8d8d8;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.slick-dots li.slick-active button {
+  background-color: #f6ac2d;
+}
+
 /*# sourceMappingURL=slick.css.map */
