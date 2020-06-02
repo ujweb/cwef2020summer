@@ -163,17 +163,28 @@ section {
             @include breakpoint(1200px) {
                 padding-left: calc(((100% - 1110px) / 2) + 20px);
             }
-            &::before {
-                @include beforeafter('', block);
+            // &::before {
+            //     @include beforeafter('', block);
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     background-image: url('../images/op-radius.svg');
+            //     background-position: right center;
+            //     background-repeat: no-repeat;
+            //     @include background-size(cover);
+            //     z-index: -1;
+            //     @include breakpoint(max-width 1023px) {
+            //         display: none;
+            //     }
+            // }
+            .slider-text-bg {
                 position: absolute;
                 top: 0;
-                left: 0;
                 right: 0;
-                bottom: 0;
-                background-image: url('../images/op-radius.svg');
-                background-position: right center;
-                background-repeat: no-repeat;
-                @include background-size(cover);
+                width: auto;
+                height: 100%;
                 z-index: -1;
                 @include breakpoint(max-width 1023px) {
                     display: none;

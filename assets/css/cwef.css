@@ -598,25 +598,16 @@ section.opening .slider--text {
     padding-left: calc(((100% - 1110px) / 2) + 20px);
   }
 }
-section.opening .slider--text::before {
-  content: "";
-  display: block;
+section.opening .slider--text .slider-text-bg {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
-  background-image: url("../images/op-radius.svg");
-  background-position: right center;
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
+  width: auto;
+  height: 100%;
   z-index: -1;
 }
 @media (max-width: 1023px) {
-  section.opening .slider--text::before {
+  section.opening .slider--text .slider-text-bg {
     display: none;
   }
 }
