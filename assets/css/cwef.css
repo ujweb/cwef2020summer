@@ -1518,6 +1518,7 @@ section .section-title .title-en {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
+  align-items: center;
   min-height: 90px;
   padding-left: 105px;
 }

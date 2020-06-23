@@ -900,6 +900,7 @@ section {
             flex-wrap: wrap;
             flex-direction: row;
             align-content: center;
+            align-items: center;
             min-height: 90px;
             padding-left: 105px;
             @include breakpoint(1024px) {
