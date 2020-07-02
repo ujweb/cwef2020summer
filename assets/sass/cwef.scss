@@ -1119,6 +1119,14 @@ section {
                 $yellow-darken,
                 1);
                 font-size: 1.125rem;
+                &:hover {
+                    background-color: darken($yellow-darken, 7.5%);
+                }
+                &.btn-disabled {
+                    color: $gray-300;
+                    background-color: $gray-100;
+                    cursor: not-allowed;
+                }
             }
         }
         .register-body {
@@ -1147,6 +1155,9 @@ section {
                 $yellow-dark,
                 1);
                 font-size: 1.125rem;
+                &:hover {
+                    background-color: darken($yellow-dark, 7.5%);
+                }
             }
         }
         .register-body {

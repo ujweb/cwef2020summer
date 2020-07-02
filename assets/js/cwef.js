@@ -100,7 +100,6 @@ $(function() {
     });
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        console.log(trendItem.length);
 
         $('.trend-item').each(function() {});
         for (let i = 0; i < trendItem.length; i++) {

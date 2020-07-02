@@ -1760,6 +1760,14 @@ section .section-title .title-en {
   background-color: #f6ac2d;
   font-size: 1.125rem;
 }
+.register-column.column-1 .register-head a.btn:hover {
+  background-color: #f29d0a;
+}
+.register-column.column-1 .register-head a.btn.btn-disabled {
+  color: #a0a0a0;
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}
 .register-column.column-1 .register-body ul.detail li i.icon {
   color: #f6ac2d;
 }
@@ -1782,6 +1790,9 @@ section .section-title .title-en {
   line-height: 1;
   background-color: #fdd23e;
   font-size: 1.125rem;
+}
+.register-column.column-2 .register-head a.btn:hover {
+  background-color: #fdc918;
 }
 .register-column.column-2 .register-body ul.detail li i.icon {
   color: #fdd23e;
